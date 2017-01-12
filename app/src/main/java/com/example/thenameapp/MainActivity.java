@@ -1,5 +1,6 @@
 package com.example.thenameapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
     public void addPerson(View view){
         //TODO
         //Go to add person activity
+        Intent intent = new Intent(this, AddPersonActivity.class);
+        startActivity(intent);
     }
     public void viewNames(View view){
         //TODO
