@@ -1,4 +1,8 @@
 <resources>
-    <string name="app_name">TheNameApp</string>
+    <string name="app_name">The Name App</string>
+    <string name="add_person">Add Person</string>
+    <string name="view_names">View Names</string>
+    <string name="view_pictures">View Pictures</string>
+    <string name="guess_names">Learning Mode</string>
 
 </resources>

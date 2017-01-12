@@ -10,29 +10,43 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.thenameapp.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
 
     <Button
+        android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="69dp" />
+        android:text="@string/add_person"
+        android:onClick="addPerson"
+        />
+
     <Button
+        android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="69dp" />
+        android:layout_below="@+id/button1"
+        android:text="@string/view_names"
+        android:onClick="viewNames"
+         />
+
     <Button
+        android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="69dp" />
+        android:layout_below="@+id/button2"
+        android:text="@string/view_pictures"
+        android:onClick="viewPictures"
+        />
+
     <Button
+        android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="69dp" />
+        android:layout_below="@+id/button3"
+        android:text="@string/guess_names"
+        android:onClick="learningMode"
+        />
 </RelativeLayout>
