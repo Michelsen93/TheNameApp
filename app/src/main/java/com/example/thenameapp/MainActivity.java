@@ -14,12 +14,20 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
     }
-    public void addPerson(View view){
-        //TODO
-        //Go to add person activity
+
+    /**
+     * Launches addperson activity
+     * @param view
+     */
+    public void viewAddPerson(View view){
         Intent intent = new Intent(this, AddPersonActivity.class);
         startActivity(intent);
     }
+
+    /**
+     *
+     * @param view
+     */
     public void viewNames(View view){
         //TODO
         //Go to viewNames activity
