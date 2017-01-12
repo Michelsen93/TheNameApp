@@ -15,7 +15,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AddPersonActivity"></activity>
+        <activity android:name=".AddPersonActivity" />
+        <activity android:name=".ViewNamesActivity" />
+        <activity android:name=".ViewPicturesActivity" />
+        <activity android:name=".LearningModeActivity"></activity>
     </application>
 
 </manifest>

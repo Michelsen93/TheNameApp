@@ -25,19 +25,27 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     *
+     * Launches viewNames activity
      * @param view
      */
     public void viewNames(View view){
-        //TODO
-        //Go to viewNames activity
+        Intent intent = new Intent(this, ViewNamesActivity.class);
+        startActivity(intent);
     }
+    /**
+     * Launches viewPictures activity
+     * @param view
+     */
     public void viewPictures(View view){
-        //TODO
-        //Go to viewPictures activity
+        Intent intent = new Intent(this, ViewPicturesActivity.class);
+        startActivity(intent);
     }
-    public void learningMode(View view){
-        //TODO
-        //Go to learningMode activity
+    /**
+     * Launches learningMode activity
+     * @param view
+     */
+    public void viewLearningMode(View view){
+        Intent intent = new Intent(this, LearningModeActivity.class);
+        startActivity(intent);
     }
 }
