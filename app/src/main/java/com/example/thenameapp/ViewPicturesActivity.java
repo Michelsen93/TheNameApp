@@ -18,7 +18,7 @@ public class ViewPicturesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Context context = getApplicationContext();
-        
+        String uri = "@drawable/sample.png";
         setContentView(R.layout.activity_view_pictures);
 
     }
