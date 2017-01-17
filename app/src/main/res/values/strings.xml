@@ -4,5 +4,8 @@
     <string name="view_names">View Names</string>
     <string name="view_pictures">View Pictures</string>
     <string name="guess_names">Learning Mode</string>
+    <string name="sample">sample</string>
+    <string name="sample2">sample2</string>
+    <string name="sample3">sample3</string>
 
 </resources>
