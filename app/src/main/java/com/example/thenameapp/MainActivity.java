@@ -21,12 +21,10 @@ public class MainActivity extends AppCompatActivity {
     protected static Bundle bundleHelper(Intent intent){
         Bundle bundle = new Bundle();
         if(!intent.hasExtra("names")) {
-            Field[] drawables = android.R.drawable.class.getFields();
             ArrayList<String> names = new ArrayList<String>();
-            for (Field f : drawables) {
-                names.add(f.getName());
-            }
-
+            names.add("sample");
+            names.add("sample2");
+            names.add("sample3");
             bundle.putStringArrayList("names", names);
         }else{
             bundle.putStringArrayList("names", intent.getStringArrayListExtra("names"));

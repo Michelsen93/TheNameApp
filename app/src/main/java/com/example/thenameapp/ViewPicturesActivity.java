@@ -25,8 +25,15 @@ public class ViewPicturesActivity extends AppCompatActivity {
         int i =0;
         //TODO - Load pictures from bundle, if any
         //TODO - Add home navigation
+
         setContentView(R.layout.activity_view_pictures);
 
+    }
+    public void goHome(View view){
+        Intent intent = new Intent(this, MainActivity.class);
+        Bundle bundle = MainActivity.bundleHelper(getIntent());
+        intent.putExtra("names", bundle);
+        startActivity(intent);
     }
     public void showText(View view){
         //TODO - Use one single textview to display name instead of creating new one.

@@ -30,5 +30,21 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="25dp" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/showName"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/view_names" />
 
+    <Button
+        android:text="@string/go_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/button"
+        android:onClick="goHome" />
 </RelativeLayout>

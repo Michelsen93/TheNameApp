@@ -1,5 +1,6 @@
 package com.example.thenameapp;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -13,6 +14,8 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 
+import java.util.ArrayList;
+
 public class ViewNamesActivity extends AppCompatActivity {
 
     @Override
@@ -21,7 +24,9 @@ public class ViewNamesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_view_names);
         //TODO - Load names from bundle.
         //TODO - Add home navigation
-        String[] names = {"sample", "sample2", "sample3"};
+        Intent intent = getIntent();
+        Bundle bundle = MainActivity.bundleHelper(getIntent());
+        ArrayList<String> names = bundle.getStringArrayList("names");
         ArrayAdapter adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, names);
         ListView lw = (ListView) findViewById(R.id.listView);
         lw.setAdapter(adapter);
@@ -42,6 +47,12 @@ public class ViewNamesActivity extends AppCompatActivity {
             }
         });
 
+    }
+    public void goHome(View view){
+        Intent intent = new Intent(this, MainActivity.class);
+        Bundle bundle = MainActivity.bundleHelper(getIntent());
+        intent.putExtra("names", bundle);
+        startActivity(intent);
     }
 
 }

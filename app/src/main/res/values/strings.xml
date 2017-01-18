@@ -7,5 +7,6 @@
     <string name="sample">sample</string>
     <string name="sample2">sample2</string>
     <string name="sample3">sample3</string>
-
+    <string name="view_name">Click a picture to show name</string>
+<string name="go_home">\u2302</string>
 </resources>
