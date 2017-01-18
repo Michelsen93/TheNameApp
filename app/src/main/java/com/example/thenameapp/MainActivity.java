@@ -5,6 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import java.lang.reflect.Field;
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -12,7 +15,23 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         int i = 0;
         //TODO load names into bundle
+
         setContentView(R.layout.activity_main);
+    }
+    protected static Bundle bundleHelper(Intent intent){
+        Bundle bundle = new Bundle();
+        if(!intent.hasExtra("names")) {
+            Field[] drawables = android.R.drawable.class.getFields();
+            ArrayList<String> names = new ArrayList<String>();
+            for (Field f : drawables) {
+                names.add(f.getName());
+            }
+
+            bundle.putStringArrayList("names", names);
+        }else{
+            bundle.putStringArrayList("names", intent.getStringArrayListExtra("names"));
+        }
+        return bundle;
     }
 
     /**
@@ -21,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
      */
     public void viewAddPerson(View view){
         Intent intent = new Intent(this, AddPersonActivity.class);
+        Bundle bundle = bundleHelper(getIntent());
+        intent.putExtra("names", bundle);
         startActivity(intent);
     }
 
@@ -30,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
      */
     public void viewNames(View view){
         Intent intent = new Intent(this, ViewNamesActivity.class);
+        Bundle bundle = bundleHelper(getIntent());
+        intent.putExtra("names", bundle);
         startActivity(intent);
     }
     /**
@@ -38,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
      */
     public void viewPictures(View view){
         Intent intent = new Intent(this, ViewPicturesActivity.class);
+        Bundle bundle = bundleHelper(getIntent());
+        intent.putExtra("names", bundle);
         startActivity(intent);
     }
     /**
@@ -46,6 +71,8 @@ public class MainActivity extends AppCompatActivity {
      */
     public void viewLearningMode(View view){
         Intent intent = new Intent(this, LearningModeActivity.class);
+        Bundle bundle = bundleHelper(getIntent());
+        intent.putExtra("names", bundle);
         startActivity(intent);
     }
 }
