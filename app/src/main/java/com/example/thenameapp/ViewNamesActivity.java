@@ -24,9 +24,9 @@ public class ViewNamesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_view_names);
         //TODO - Load names from bundle.
         //TODO - Add home navigation
-        Intent intent = getIntent();
-        Bundle bundle = MainActivity.bundleHelper(getIntent());
-        ArrayList<String> names = bundle.getStringArrayList("names");
+
+        ArrayList<String> names = new ArrayList<String>();
+        names.add("sample");
         ArrayAdapter adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, names);
         ListView lw = (ListView) findViewById(R.id.listView);
         lw.setAdapter(adapter);
@@ -50,8 +50,6 @@ public class ViewNamesActivity extends AppCompatActivity {
     }
     public void goHome(View view){
         Intent intent = new Intent(this, MainActivity.class);
-        Bundle bundle = MainActivity.bundleHelper(getIntent());
-        intent.putExtra("names", bundle);
         startActivity(intent);
     }
 

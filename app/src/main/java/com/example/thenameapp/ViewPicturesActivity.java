@@ -31,8 +31,6 @@ public class ViewPicturesActivity extends AppCompatActivity {
     }
     public void goHome(View view){
         Intent intent = new Intent(this, MainActivity.class);
-        Bundle bundle = MainActivity.bundleHelper(getIntent());
-        intent.putExtra("names", bundle);
         startActivity(intent);
     }
     public void showText(View view){
