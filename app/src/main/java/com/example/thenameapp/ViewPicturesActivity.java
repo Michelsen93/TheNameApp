@@ -23,11 +23,13 @@ public class ViewPicturesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         int i =0;
-
+        //TODO - Load pictures from bundle, if any
+        //TODO - Add home navigation
         setContentView(R.layout.activity_view_pictures);
 
     }
     public void showText(View view){
+        //TODO - Use one single textview to display name instead of creating new one.
         CharSequence name = view.getContentDescription();
         TextView text = new TextView(this);
         text.setText(name);

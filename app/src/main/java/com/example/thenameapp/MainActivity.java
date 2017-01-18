@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         int i = 0;
-
+        //TODO load names into bundle
         setContentView(R.layout.activity_main);
     }
 

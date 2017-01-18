@@ -19,7 +19,8 @@ public class ViewNamesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_names);
-
+        //TODO - Load names from bundle.
+        //TODO - Add home navigation
         String[] names = {"sample", "sample2", "sample3"};
         ArrayAdapter adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, names);
         ListView lw = (ListView) findViewById(R.id.listView);
