@@ -9,7 +9,8 @@ public class AddPersonActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_person);
-        //TODO - Create possibility to add picture with name
+        //TODO - Create possibility to add picture with name. i.g take picture and/or load from phone files
+
         //TODO - Load content into a bundle
         //TODO - Add home navigation
     }
